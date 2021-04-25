@@ -50,7 +50,8 @@
     </div>
 </body>
 <script>
-     $("#form").hide();
+    for (var it in $.cookie()) $.removeCookie(it);
+    $("#form").hide();
     $("#form").toggle(5000);
 
     //alert("he")
