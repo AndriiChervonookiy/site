@@ -15,6 +15,10 @@
         #ok{
             width: 160px;
         }
+        #form{
+            background-color: papayawhip;
+            width: 20%;
+        }
 
     </style>
 <head>
@@ -24,26 +28,31 @@
     <title>Reg</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <td><span>Login:</span></td>
-            <td><input id="login" type="text"></td>
-        </tr>
-        <tr>
-            <td><span>Password:</span></td>
-            <td><input id="password" type="password"></td>
-        </tr>
-        <tr>
-            <td><span>Confirm Password:</span></td>
-            <td><input id="confPassword" type="password"></td>
-        </tr>
-        <tr>
-            <td><button id="clear">Clear</button></td>
-            <td><button id="submit">Submit</button></td>
-        </tr>
-    </table>
+    <div id="form">
+        <table>
+            <tr>
+                <td><span>Login:</span></td>
+                <td><input id="login" type="text"></td>
+            </tr>
+            <tr>
+                <td><span>Password:</span></td>
+                <td><input id="password" type="password"></td>
+            </tr>
+            <tr>
+                <td><span>Confirm Password:</span></td>
+                <td><input id="confPassword" type="password"></td>
+            </tr>
+            <tr>
+                <td><button id="clear">Clear</button></td>
+                <td><button id="submit">Submit</button></td>
+            </tr>
+        </table>
+    </div>
 </body>
 <script>
+     $("#form").hide();
+    $("#form").toggle(5000);
+
     //alert("he")
     $("#clear").click(function(){  
         $("#login").val("");
@@ -54,7 +63,7 @@
     //&& $("#login").val.length >= 2 && $("#password").val.length >= 2
     $("#submit").click(function(){  
         if($("#password").val() === $("#confPassword").val()){
-            document.cookie = "user=John";
+            document.cookie = "login=John";
             alert(document.cookie);
           
             pageSw('index.html')
