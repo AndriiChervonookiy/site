@@ -50,13 +50,13 @@
         $("#confPassword").val("");
     });
     alert($("#login").val.length)
+    //&& $("#login").val.length >= 2 && $("#password").val.length >= 2
     $("#submit").click(function(){  
-        if($("#password").val() == $("#confPassword").val() && $("#login").val.length >= 2 && $("#password").val.length >= 2){
-            alert("ok")
+        if($("#password").val() == $("#confPassword").val()){
             pageSw('index.html')
         }
         else{
-            alert("Input Error suet")
+            alert("Input Error")
         }
     });
 </script>
