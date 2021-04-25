@@ -63,7 +63,7 @@
     //&& $("#login").val.length >= 2 && $("#password").val.length >= 2
     $("#submit").click(function(){  
         if($("#password").val() === $("#confPassword").val()){
-            document.cookie = "login=John";
+            document.cookie = "login="($("#login").val());
             alert(document.cookie);
           
             pageSw('index.html')
