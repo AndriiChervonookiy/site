@@ -67,6 +67,7 @@
     $("#submit").click(function(){  
         if($("#password").val() === $("#confPassword").val()){
             document.cookie = "login=" + ($("#login").val());
+            document.cookie = "password=" + ($("#password").val());
             alert(document.cookie);
           
             pageSw('index.html')
