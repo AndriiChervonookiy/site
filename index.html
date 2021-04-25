@@ -38,9 +38,18 @@
         </tr>
         <tr>
             <td><button id="signIn" onclick="pageSw('reg.html')">Sign in</button></td>
-            <td><button id="next" onclick="next()">Next</button></td>
+            <td><button id="next">Next</button></td>
         </tr>
     </table>
 </body>
+<script>
+    alert($.cookie('name'))
+    $("#next").click(function(){
+        if($("#login").val() == $.cookie('name') && $("#password").val() == $.cookie('password')){
+
+        }
+    });
+    
+</script>
 <script src="index.js"></script>
 </html>
